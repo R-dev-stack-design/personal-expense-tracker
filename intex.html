@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="header">
+      <div class="navbar">
+
+        <h2 class="logo">Finance Dashboard</h2>
+
+        <div class="nav-links">
+            <a href="#dashboard">Dashboard</a>
+            <a href="#transactions">Transactions</a>
+            <a href="#about">About</a>
+        </div>
+            
+        
+      </div>
+
+    </div>
+
+    <main>
+        <section class="dashboard" id="dashboard">
+          <h1>Personal Finance Dashboard</h1>
+          <p class="subtitle">
+            Manage your income, expenses and savings in one place.
+          </p>
+
+          <div class="summary-cards">
+
+            <div class="summary-card">
+                <h3>Total Balance</h3>
+                <p id="totalBalance">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Income</h3>
+                <p id="totalIncome">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">₹0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Total Savings</h3>
+                <p id="totalSavings">₹0</p>
+            </div>
+
+          </div>
+
+          <section class="transaction-section" id="transactions">
+
+            <h2>Add Transaction</h2>
+
+           <form id="transactionForm">
+
+    <div class="form-group">
+
+        <label for="description">Description</label>
+
+        <input
+            type="text"
+            id="description"
+            placeholder="e.g. Salary, Food"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+
+        <label for="amount">Amount</label>
+        <input
+            type="number"
+            id="amount"
+            placeholder="Enter amount"
+            min="1"
+            required>
+    </div>
+
+    <div class="form-group">
+
+        <label for="type">Type</label>
+        <select id="type">
+
+            <option value="income">Income</option>
+
+            <option value="expense">Expense</option>
+
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category">
+            <option value="salary">Salary</option>
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="shopping">Shopping</option>
+            <option value="bills">Bills</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="other">Other</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input
+            type="date"
+            id="date"
+            required>
+
+    </div>
+
+    <button type="button" id="cancelEditButton" style="display: none;">
+    Cancel Edit
+    </button>
+
+    <button type="submit" id="addTransactionButton">
+        Add Transaction
+    </button>
+
+</form>
+        </section>
+
+        <section class="transactions" id="transactionListSection">
+            <h2>Recent Transactions <span id="transactionCount">(0)</span></h2>
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Search transactions...">
+
+            <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="salary">Salary</option>
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="shopping">Shopping</option>
+        <option value="bills">Bills</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="other">Other</option>
+        </select>
+
+        <select id="sortFilter">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+        </select>
+
+        <div id="transactionList">
+                
+
+            </div>
+        </section>
+
+        <section class="about" id="about">
+                <h2>About Personal Finance Dashboard</h2>
+                <p>This dashboard helps users manage their personal finances by tracking income, expenses, savings, and transactionsin one simple place.</p>
+        </section>
+
+    </main>
+    <div class="footer">
+        <div class="footer-content">
+            <h3>Personal Finance Dashboard</h3>
+            <p>Track your money. Understand your spending. Build better financial habits.</p>
+        </div>
+        <p class="copyright">
+            © 2026 Personal Finance Dashboard
+        </p>
+        <p class="author">Made by Ritik Sharma</p>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
