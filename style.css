@@ -300,3 +300,123 @@ body{
     flex-wrap: wrap;
     margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dashboard {
+        padding: 35px 20px;
+    }
+
+    .dashboard h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .summary-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .summary-card {
+        padding: 20px;
+    }
+
+    .summary-card p {
+        font-size: 22px;
+    }
+
+    .transaction-section {
+        margin: 40px 15px;
+        padding: 25px 20px;
+    }
+
+    .transaction-section h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .transactions {
+        margin: 40px 15px;
+        padding: 25px 20px;
+    }
+
+    .transactions h2 {
+        font-size: 24px;
+    }
+
+
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #searchInput,
+    #categoryFilter,
+    #sortFilter,
+    #typeFilter {
+        width: 100%;
+    }
+
+    .about {
+        margin: 40px 15px;
+        padding: 30px 20px;
+    }
+    .footer {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard h1 {
+        font-size: 26px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-card {
+        text-align: center;
+    }
+
+    .transaction-section {
+        padding: 20px 15px;
+    }
+
+    .transactions {
+        padding: 20px 15px;
+    }
+
+    #transactionList > div {
+        padding: 15px;
+    }
+}
